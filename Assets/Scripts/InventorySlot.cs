@@ -17,10 +17,15 @@ public class InventorySlot : MonoBehaviour
 
     public Button _deleteButton;
 
+    public Button _closeButton;
+
     public void InspectItem()
     {
-        if(_slotItem != null)
+        if(_slotItem != null && _inspectionWindow.activeInHierarchy == false)
         {
+            _deleteButton.onClick.AddListener(RemoveItem);
+            _closeButton.onClick.AddListener(CloseInspectionWindow);
+            
             _inspectionImage.sprite = _slotItem._itemSprite;
             _inspectionName.text = _slotItem._itemName;
             _inspectionPrice.text = _slotItem._itemPrice.ToString();
@@ -28,11 +33,28 @@ public class InventorySlot : MonoBehaviour
 
             _inspectionWindow.SetActive(true);
         }
+
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public void RemoveItem()
     {
-        
+       if(InventoryManager._instance._weapons[_slotNumber] != null)
+       {
+        InventoryManager._instance._weapons[_slotNumber] = null;
+        InventoryManager._instance._weaponsNames[_slotNumber].text = "Empty";
+        InventoryManager._instance._weaponsSprites[_slotNumber] = null;
+       } 
+
+       _slotItem = null;
+
+       
+    }
+
+    public void CloseInspectionWindow()
+    {
+        _deleteButton.onClick.RemoveListener(RemoveItem);
+       _inspectionWindow.SetActive(false);
     }
 }
