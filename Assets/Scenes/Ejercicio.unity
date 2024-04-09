@@ -200,28 +200,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 372444010}
-  - component: {fileID: 372444009}
+  - component: {fileID: 372444011}
   m_Layer: 0
-  m_Name: TranslationManager
+  m_Name: LanguageManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &372444009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 372444008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d7ef9a3e60d274788e1f515719a242, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  languageName: 
-  translatedText: 
 --- !u!4 &372444010
 Transform:
   m_ObjectHideFlags: 0
@@ -237,6 +223,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &372444011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372444008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9ff0a2c69103c4c8e6baa665e19412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _displayText: {fileID: 1405489620}
+  _translations:
+  - {fileID: 11400000, guid: c62814d2d3f08314cb0ae848d205d411, type: 2}
+  - {fileID: 11400000, guid: cd839464d7861de40884984b6b7e9877, type: 2}
+  - {fileID: 11400000, guid: d40a0a7ad79c7654b9c9deb93529dbaa, type: 2}
+  - {fileID: 11400000, guid: 5fe74edb5f3a989479cab1763f026121, type: 2}
 --- !u!1 &979539102
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +425,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1095567133}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372444011}
+        m_TargetAssemblyTypeName: LanguageManager, Assembly-CSharp
+        m_MethodName: TranslateText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Andalusian
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1095567133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +552,7 @@ GameObject:
   - component: {fileID: 1405489621}
   - component: {fileID: 1405489620}
   m_Layer: 5
-  m_Name: Text Spanish
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,7 +702,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1625729422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372444011}
+        m_TargetAssemblyTypeName: LanguageManager, Assembly-CSharp
+        m_MethodName: TranslateText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Japanese
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1625729422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,7 +834,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1676774081}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372444011}
+        m_TargetAssemblyTypeName: LanguageManager, Assembly-CSharp
+        m_MethodName: TranslateText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: French
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1676774081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,7 +1058,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2107728746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372444011}
+        m_TargetAssemblyTypeName: LanguageManager, Assembly-CSharp
+        m_MethodName: TranslateText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Spanish
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2107728746
 MonoBehaviour:
   m_ObjectHideFlags: 0
