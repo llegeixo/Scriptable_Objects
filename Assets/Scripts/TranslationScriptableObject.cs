@@ -7,6 +7,9 @@ public class TranslationScriptableObject : ScriptableObject
 {
     public string languageName;
     public string translatedText;
+    public string translatedText1;
+    public string translatedText2;
+    public string translatedText3;
 
 }
 
